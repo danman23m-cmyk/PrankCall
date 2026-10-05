@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Phone Prank Simulator & Fake Call Generator | PrankCall</title>
+<meta name="description" content="Create a funny simulated phone prank call with custom callers, scenarios, countdowns and interactive conversations.">
+<meta name="robots" content="index,follow"><meta name="theme-color" content="#090d18">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header><a class="brand" href="#"><b>☎</b> PrankCall</a><nav><a href="#scenarios">Scenarios</a><a href="#how">How It Works</a><a href="#faq">FAQ</a></nav></header>
+<main>
+<section class="hero"><span class="badge">🎭 Browser-based prank simulator</span><h1>Phone Prank Simulator</h1>
+<p>Create a hilarious fake incoming call, choose the character, answer the call, and play through an interactive prank conversation.</p>
+<button class="primary big" id="start">Create a Prank Call →</button><small>Simulation only for now — no real phone calls are placed.</small></section>
+
+<section class="panel" id="scenarios"><div class="head"><div><label>STEP 1</label><h2>Choose your caller</h2></div><span class="pill">FREE</span></div>
+<div class="grid" id="scenarioGrid"></div>
+<div class="forms"><label>Caller name<input id="callerName" value="Angry Neighbor" maxlength="30"></label>
+<label>Fake caller number<input id="callerNumber" value="(555) 014-2026" maxlength="20"></label></div>
+<button class="primary" id="preview">Preview Incoming Call</button></section>
+
+<section class="panel" id="how"><label>HOW IT WORKS</label><h2>Make a prank in seconds</h2><div class="steps">
+<div><b>01</b>Pick a scenario</div><div><b>02</b>Customize the caller</div><div><b>03</b>Start the simulated call</div><div><b>04</b>Choose dialogue options</div></div></section>
+
+<section class="panel" id="faq"><label>FAQ</label><h2>Phone prank simulator questions</h2>
+<details><summary>Does PrankCall make a real phone call?</summary><p>No. This version is a browser simulation. Real calling may be added later through a compliant voice provider.</p></details>
+<details><summary>Can I customize the caller?</summary><p>Yes. Choose a scenario and change the displayed caller name and fake number.</p></details>
+<details><summary>Does it work on phones?</summary><p>Yes. The interface is responsive and designed for mobile browsers.</p></details>
+</section>
+</main><footer><b>PrankCall</b><span>Funny phone prank simulations in your browser.</span><span>© 2026</span></footer>
+
+<div class="modal hidden" id="modal"><div class="phone"><div class="phonebar">● <span id="status">Incoming Call</span> ⌁</div>
+<div class="caller"><div class="avatar" id="avatar">😡</div><small>INCOMING CALL</small><h2 id="modalName">Angry Neighbor</h2><p id="modalNumber">(555) 014-2026</p><div class="pulse"></div>
+<div class="actions" id="actions"><button class="decline" id="decline">✕<small>Decline</small></button><button class="answer" id="answer">✓<small>Answer</small></button></div>
+<div class="conversation hidden" id="conversation"><div class="bubble" id="dialogue"></div><div class="choices" id="choices"></div><button class="end" id="end">End call</button></div><button class="close" id="close">Close</button></div></div></div>
+<script src="script.js"></script></body></html>
